@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #a84;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
 .App-link {
@@ -29,10 +30,41 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
 }
+
+.user_engine{
+    position: relative;
+    background: maroon; 
+    color: white; 
+    margin: 8px; 
+    padding: 4px;
+  }
+.apprecie{position: absolute; top: 20px; left: 10px;}
+.user_engine *{margin: 4px; padding: 4px;}
+.nmber{background: blue; 
+    margin: 4px; 
+    padding: 4px; 
+    min-width: 36px; 
+    display: inline-block;
+}
+
+.compte{background: white; color: maroon; font-size: 20px; font-weight: bold}
+
+input[type=button]{color: white; 
+    background: #8be; 
+    margin: 4px; 
+    padding: 4px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: large;
+    min-width: 28px;
+}
+
+.bien{color: #afb; font-size: large;}
+.mal{color: #f88; font-size: large;}
