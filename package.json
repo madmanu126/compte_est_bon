@@ -2,7 +2,7 @@
   "name": "le_compte_est_bon",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://manu126.github.io/le_compte_est_bon",
+  "homepage":"https://madmanu126.github.io/le_compte_est_bon",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
