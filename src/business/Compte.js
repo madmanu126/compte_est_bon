@@ -15,6 +15,8 @@ export function Compte(props){
 
     const eappr={ok: "bien", ko:"mal"};
 
+    const decOpe = {'+':'+','-':'\u2212','*':'X','/':'/'}
+
     function reset(restore){
         console.log("reset!");
         setNmbCourant();
@@ -63,16 +65,16 @@ export function Compte(props){
         <span>{operator}</span>
         <div>
             {['+','-','*','/'].map(item=>
-                <input type='button' value={item} onClick={()=>setOperator(item)}/>
+                <input className='operator' type='button' value={decOpe[item]} onClick={()=>setOperator(item)}/>
             )}
         </div>
         <div>{game.nmbers.map(item=>
-            <span className='nmber' onClick={()=>operande(item)}>{item}</span>
+            <input type="button" value={item} className='nmber' onClick={()=>operande(item)}/>
         )}</div>
         <div className='apprecie'>
             <span className={apprecie}>{message}</span>
         </div>
-        <input type='button' value='Debut' onClick={()=>reset(true)}/>
+        {nmbCourant &&<input type='button' className='operator' value='Debut' onClick={()=>reset(true)}/>}
     </div>
 }
 

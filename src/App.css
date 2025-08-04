@@ -45,25 +45,51 @@
     margin: 8px; 
     padding: 4px;
   }
+
 .apprecie{position: absolute; top: 20px; left: 10px;}
+
 .user_engine *{margin: 4px; padding: 4px;}
+
 .nmber{background: blue; 
     margin: 4px; 
     padding: 4px; 
     min-width: 36px; 
     display: inline-block;
+    color: white;
+    border-radius: 5px;
+    font-size: x-large;
+}
+.nmber::active{
+    box-shadow: 3px 3px 2px  #afb;
+}
+.nmber:hover{
+    cursor: default;
 }
 
 .compte{background: white; color: maroon; font-size: 20px; font-weight: bold}
 
-input[type=button]{color: white; 
-    background: #8be; 
+.operator, #footer>div{color: white; 
+    background: #7a6; 
     margin: 4px; 
     padding: 4px;
     border-radius: 6px;
-    font-weight: bold;
-    font-size: large;
+    
+    font-size: x-large;
     min-width: 28px;
+}
+
+#footer>div:hover{
+    cursor: default;
+    box-shadow: 2px 2px 2px 1px  #fba;
+}
+#footer>div:active{
+    box-shadow: 2px 2px 2px 1px  #fba;
+}
+
+#footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .bien{color: #afb; font-size: large;}

@@ -39,20 +39,28 @@ function chercher(){
                 Le compte est bon ... ou pas
             </h2>
         </header>
-        <p className='compte'>
+        {compte&&<p className='compte'>
             {compte}
         </p>
+        }{compte &&
         <Compte game={game}/>
-        <div>{donne_correction? 
+        }
+        {donne_correction && 
             <div>{donne_correction.map((line)=><p>{line}</p>)}</div>
-            :<span><i>Non corrigé</i></span>}
-        </div>
+        } 
         <div id='footer'>
-            <input type='button' value='Tirage' onClick={()=>tirageAleatoire()}/>
-            <input type='button' value='Chercher' onClick={()=>chercher()}/>
+            <div onClick={()=>tirageAleatoire()}>Tirage</div>
+            {compte && !donne_correction &&<div onClick={()=>chercher()}>Chercher</div>}
         </div>
     </div>
   );
+}
+
+function oldInput(){
+    return <>
+    <input type='button' value='Tirage' onClick={()=>{}}/>
+    <input type='button' value='Chercher' onClick={()=>{}}/>
+    </>
 }
 
 export default App;
