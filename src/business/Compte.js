@@ -15,7 +15,7 @@ export function Compte(props){
 
     const eappr={ok: "bien", ko:"mal"};
 
-    const decOpe = {'+':'+','-':'\u2212','*':'X','/':'/'}
+    const decOpe = {'+':'+','-':'\u2212','*':'X','/':'/', null:"<<"}
 
     function reset(restore){
         console.log("reset!");
@@ -62,9 +62,9 @@ export function Compte(props){
     }
     return <div className='user_engine'>
         <span>{nmbCourant}</span>
-        <span>{operator}</span>
+        <span>{operator&&decOpe[operator]}</span>
         <div>
-            {['+','-','*','/'].map(item=>
+            {['+','-','*','/',null].map(item=>
                 <input className='operator' type='button' value={decOpe[item]} onClick={()=>setOperator(item)}/>
             )}
         </div>

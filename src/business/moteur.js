@@ -53,6 +53,7 @@ function combine(liste,n)
          for(indoper=0;indoper<4;indoper++)  //les 4 op�rateurs
             {oper=liste_operateur[indoper];
             resu=calculer(liste[k1],liste[k2],oper);
+            //detail[n-2]=(liste[k1]+oper+liste[k2]+"="+resu+"\n");
             if(resu==compte)
               {
               detail[n-2]=(liste[k1]+oper+liste[k2]+"="+resu+"\n");
@@ -67,7 +68,8 @@ function combine(liste,n)
 
               	if ((n>=3)&&(resu<3000))
                 	if (combine(liste2,n-1)) //il doit rester au moins deux nombres!
-                     {detail[n-2]=(liste[k1]+oper+liste[k2]+"="+resu+"\n");	
+                     {
+                      detail[n-2]=(liste[k1]+oper+liste[k2]+"="+resu+"\n");	
                       return 1;
                      }
                 }/*resu*/
